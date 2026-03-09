@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Portifolio</title>
+    <link rel="icon" type="image/png" href="favicon-32x32.png">
+    <title>Portfólio | Irisbarney</title>
 </head>
 <body>
     <header>
@@ -12,38 +13,122 @@
             <ul>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#conquistas">Conquistas</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
-        <button id="toggle-theme" class="btn-tema">Modo Escuro</button>
+        <button id="toggle-theme" class="btn-tema">Modo Claro</button>
     </header>
-        <main class="container">
-            <section id="hero">
-                <img src="irisbarney.jpg" alt="Foto de Irisbarney" class="profile-pic">
-                <h1>Irisbarney Damasceno Martins Filho</h1>
-            </section>
-            <section id="sobre">
-                <h2>Sobre Mim</h2>
-                <p>Olá, meu nome é Irisbarney Damasceno Martins Filho, tenho 17 anos e sou um estudante apaixonado por tecnologia. Atualmente, estou cursando o ensino médio e tenho um grande interesse em desenvolvimento de software e desenvolvimento web. Sou dedicado, curioso e sempre busco aprender coisas novas para aprimorar minhas habilidades. Estou animado para compartilhar meus projetos e experiências com vocês!</p>
-            </section>
-            <section id="projetos">
-                <h2>Projeto</h2>
-                <ul class="lista-projetos">
-                    <li><h3>Projeto 1</h3></li>
-                    <li><h3>Projeto 2</h3></li>
-                    <li><h3>Projeto 3</h3></li>
-                </ul>
-            </section>
-            <section id="contato">
-                <h2>Contato</h2>
-                <a href="https://irisbarney.iy@gmail.com" target="_blank">Email |</a>
-                <a href="https://www.linkedin.com/in/irisbarney-iy/" target="_blank">LinkedIn |</a>
-                <a href="https://github.com/irisbarney-iy" target="_blank">GitHub</a>
-            </section>
+
+    <main class="container">
+        <section id="hero">
+            <img src="irisbarney.jpg" alt="Foto de Irisbarney" class="profile-pic">
+            <h1>Irisbarney Damasceno Martins Filho</h1>
+            <p style="color: var(--cor-destaque); font-weight: bold;">Desenvolvedor em Formação | Java & Web</p>
+            <a href="curriculo_irisbarney.pdf" download class="btn-git" style="display: inline-block; margin-top: 15px; font-size: 1.1rem; padding: 12px 25px;">
+                Baixar Meu Currículo
+            </a>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Olá, meu nome é Irisbarney, tenho 17 anos e sou de Pacatuba - CE. Sou estudante do Ensino Médio Técnico em Informática na EEEP Professora Luiza de Teodoro Vieira. Tenho um grande interesse em desenvolvimento de software (Back-end com Java) e desenvolvimento web (Front-end). Sou dedicado, curioso e busco minha primeira oportunidade de estágio para transformar conhecimento teórico em soluções reais.</p>
+        </section>
+
+        <section id="projetos">
+            <h2>Projetos em Destaque</h2>
+<ul class="lista-projetos">
+                <li class="projeto-card">
+                    <div class="projeto-thumb">
+                        <span>E-commerce</span> 
+                    </div>
+                    <div class="projeto-info">
+                        <h3>E-commerce Web</h3>
+                        <p>Desenvolvimento de interface web simulando uma loja virtual. O protótipo demonstrou tanta solidez técnica que foi utilizado como base estrutural para a empresa real <a href="https://vyzee.com.br/" target="_blank" rel="noopener" style="color: var(--cor-destaque);">Vyzee</a>.</p>
+                        <div class="tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                        </div>
+                        <div class="projeto-links">
+                            <a href="https://github.com/Irisbarney-iy/ecommerce-prototipo" target="_blank" class="btn-git">Ver no GitHub</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="projeto-card">
+                    <div class="projeto-thumb">
+                        <span>Java & DB</span> 
+                    </div>
+                    <div class="projeto-info">
+                        <h3>Integração Java e BD</h3>
+                        <p>Desenvolvimento de aplicação Back-end focada na conexão entre Java e banco de dados relacional. O projeto demonstra a aplicação prática de persistência de dados e operações CRUD.</p>
+                        <div class="tags">
+                            <span>Java</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="projeto-links">
+                            <a href="https://github.com/Irisbarney-iy/Conex-oBancoDeDadosJava" target="_blank" class="btn-git">Ver no GitHub</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="projeto-card">
+                    <div class="projeto-thumb">
+                        <span>Biblioteca Java</span> 
+                    </div>
+                    <div class="projeto-info">
+                        <h3>Sistema de Biblioteca</h3>
+                        <p>Aplicação em desenvolvimento para simular o gerenciamento de uma biblioteca escolar. O foco do projeto é aplicar conceitos fortes de Programação Orientada a Objetos (POO), herança e estruturação de classes.</p>
+                        <div class="tags">
+                            <span>Java</span>
+                            <span>POO</span>
+                            <span>Em progresso ⚙️</span>
+                        </div>
+                        <div class="projeto-links">
+                            <a href="https://github.com/Irisbarney-iy/projeto-biblioteca-java" target="_blank" class="btn-git">Ver no GitHub</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        
+        <section id="conquistas">
+            <h2>Conquistas & Certificações</h2>
+            <div class="conquista-card">
+                <div class="conquista-info">
+                    <h3>Top 10 Finalistas - Fábrica de Programadores</h3>
+                    <p>Menção honrosa no curso "Aprendendo a Programar com Games e IA" (200h) pela UFC / Fundação Demócrito Rocha.</p>
+                    <p><strong>Tecnologias envolvidas:</strong> Lógica de Jogos e Inteligência Artificial via MIT App Inventor.</p>
+                </div>
+            </div>
+            <div class="conquista-card">
+                <div class="conquista-info">
+                    <h3>Certificações Fundação Bradesco</h3>
+                    <p>- Introdução à Programação Orientada a Objetos (POO).</p>
+                    <p>- Crie um Site Simples usando HTML, CSS e JavaScript.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <a href="https://wa.me/5585997387175" target="_blank">WhatsApp</a>
+            <p>|</p>
+            <a href="https://www.instagram.com/irisbarney.iy/" target="_blank">Instagram</a>
+            <p>|</p>
+            <a href="mailto:irisbarney.iy@gmail.com" target="_blank">Email</a>
+            <p>|</p>
+            <a href="https://www.linkedin.com/in/irisbarney-iy/" target="_blank">LinkedIn</a>
+            <p>|</p>
+            <a href="https://github.com/irisbarney-iy" target="_blank">GitHub</a>
+        </section>
     </main>
+
     <footer>
         <p>&copy; 2026 Irisbarney Damasceno Martins Filho. Todos os direitos reservados.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

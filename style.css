@@ -1,162 +1,283 @@
-:root{
+* {
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+}
+
+:root {
     --cor-fundo: #1a1a1a;
+    --cor-fundo-card: #2a2a2a;
     --cor-texto: #fdfaf0;
     --cor-destaque: #e9c46a;
 }
 
-[data-theme="light"]{
+[data-theme="light"] {
     --cor-fundo: #fdfaf0;
+    --cor-fundo-card: #ffffff;
     --cor-texto: #2d2d2d;
     --cor-destaque: #d4a373;
 }
 
-body{
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 0px;
     transition: background-color 0.3s, color 0.3s;
 }
 
-main{
+main {
+    text-align: center;
     margin-top: 80px;
 }
 
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
     width: 100%;
-    height: 60px;
+    height: 70px;
     background-color: var(--cor-fundo);
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     border-bottom: 1px solid var(--cor-destaque);
+    transition: background-color 0.3s;
 }
 
-nav ul{
+nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 2rem;
-    margin-top: 1rem;
+    margin: 0;
+    padding: 0;
 }
 
-nav a{
+nav a {
     text-decoration: none;
     color: var(--cor-destaque);
     font-weight: bold;
     transition: 0.3s ease;
 }
 
-nav a:hover{
-    color: var(--cor-texto);
+@media (hover: hover) {
+    nav a:hover {
+        color: var(--cor-texto);
+    }
+    .projeto-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .btn-tema:hover {
+        background-color: var(--cor-texto);
+        color: var(--cor-fundo);
+    }
+    #contato a:hover {
+        color: var(--cor-texto);
+    }
 }
 
-.container{
-    max-width: 800px;
+nav a:active, #contato a:active, .btn-tema:active {
+    opacity: 0.6;
+}
+
+.container {
+    max-width: 1100px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
-.lista-projetos{
+.lista-projetos {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     list-style: none;
     padding: 0;
+    margin-top: 30px;
 }
 
-.lista-projetos li{
-    background-color: transparent;
+.projeto-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--cor-fundo-card);
     border: 1px solid var(--cor-destaque);
-    padding: 2rem;
+    border-radius: 12px;
+    overflow: hidden;
     flex: 1 1 calc(33.333% - 20px);
-    min-width: 250px;
-    border-radius: 8px;
-    transition: transform 0.2s;
+    min-width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.lista-projetos li:hover{
-    transform: translateY(-5px);
-    background-color: rgba(0, 0, 0, 0.05);
+.projeto-thumb {
+    width: 100%;
+    height: 180px;
+    background-color: var(--cor-destaque);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--cor-fundo);
 }
 
-.btn-tema{
-    position: absolute;
-    right: 20px;
-    width: 120px;
+.projeto-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.projeto-info p {
+    font-size: 0.95rem;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.tags {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.tags span {
+    font-size: 0.85rem;
+    background: rgba(212, 163, 115, 0.2);
+    color: var(--cor-destaque);
+    padding: 4px 10px;
+    border-radius: 15px;
+    margin-right: 5px;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.projeto-links {
+    margin-top: 20px;
+}
+
+.btn-git {
+    display: block;
+    padding: 10px;
     background-color: var(--cor-destaque);
     color: var(--cor-fundo);
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 4px;
+    text-decoration: none;
+    border-radius: 5px;
     font-weight: bold;
-    width: 120px;
-    text-align: center;
-    font-size: 0.8rem;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
-.btn-tema:hover{
+.btn-git:hover {
     background-color: var(--cor-texto);
     color: var(--cor-fundo);
 }
 
-#hero{
-    text-align: center;
-    padding: 80px;
+.btn-tema {
+    position: absolute;
+    right: 20px;
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo);
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s ease;
 }
 
-.profile-pic{
-    width: 150px;
-    height: 150px;
+#hero {
+    text-align: center;
+    padding: 100px 20px 50px;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid var(--cor-destaque);
-    margin-top: 1rem;
+    border: 4px solid var(--cor-destaque);
+    margin-bottom: 1rem;
 }
 
-#contato{
+#conquistas {
+    margin-top: 60px;
+}
+
+.conquista-card {
+    background: linear-gradient(135deg, rgba(212, 163, 115, 0.1), transparent);
+    border-left: 4px solid var(--cor-destaque);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.conquista-info h3 {
+    margin-top: 0;
+    color: var(--cor-destaque);
+}
+
+#sobre p {
     text-align: center;
-    padding: 40px 0;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-#contato a{
+#contato {
+    text-align: center;
+    padding: 60px 0;
+}
+
+#contato a {
     color: var(--cor-destaque);
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s ease;
 }
-#contato a:hover{
+
+#contato p {
+    display: inline-block;
+    margin: 0 10px;
     color: var(--cor-texto);
+    opacity: 0.5;
 }
 
-footer{
+footer {
     text-align: center;
-    padding: 0px;
+    padding: 20px;
     background-color: var(--cor-fundo);
     border-top: 1px solid var(--cor-destaque);
+    font-size: 0.9rem;
 }
 
-@media (max-width: 600px){
-    nav ul{
+@media (max-width: 768px) {
+    header {
         flex-direction: column;
-        gap: 1rem;
-        align-items: center;
+        height: auto;
+        padding: 15px 0;
     }
 
-    header h1 {
-        font-size: 1.5rem;
+    .btn-tema {
+        position: static;
+        margin-top: 15px;
     }
 
-    .container{
-        padding: 0 20px;
+    nav ul {
+        gap: 1.5rem;
+    }
+
+    #hero {
+        padding: 130px 20px 40px;
+    }
+
+    .lista-projetos {
+        flex-direction: column;
+    }
+
+    .projeto-card {
+        min-width: 100%;
     }
 }
